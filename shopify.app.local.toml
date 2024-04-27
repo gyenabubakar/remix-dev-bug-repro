@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "14db5940a13122a1aae386748ecba363"
+name = "distrofy-local"
+application_url = "https://elements-march-trash-on.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "distro-test-store-jarek.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_merchant_managed_fulfillment_orders,write_third_party_fulfillment_orders"
+
+[auth]
+redirect_urls = [
+  "https://elements-march-trash-on.trycloudflare.com/auth/callback",
+  "https://elements-march-trash-on.trycloudflare.com/auth/shopify/callback",
+  "https://elements-march-trash-on.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false

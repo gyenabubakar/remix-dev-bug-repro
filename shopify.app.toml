@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "distro"
+client_id = "87316f1f3b22104636dec1e4649caa5a"
+application_url = "https://shop-app.dev.distromfg.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_merchant_managed_fulfillment_orders,write_third_party_fulfillment_orders"
+
+[auth]
+redirect_urls = [
+  "https://shop-app.dev.distromfg.com/auth/callback",
+  "https://shop-app.dev.distromfg.com/auth/shopify/callback",
+  "https://shop-app.dev.distromfg.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "distro-38f41-test-store.myshopify.com"
